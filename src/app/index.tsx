@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./styles/index.css";
-import { AppRouter } from "../shared/router";
+import { AppRouter } from "./routing";
 import { getLocalStorage } from "../shared/libs/utils";
 import useAutorotation from "./store/useAutorotation";
 

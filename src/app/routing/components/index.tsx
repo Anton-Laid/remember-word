@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { UserRole } from "../../types/user";
-import { Routes } from "../../config";
+import { UserRole } from "../../../shared/types/user";
+import { Routes } from "../../../shared/config";
 
 interface CommonRouteProps {
   someflag?: never;
