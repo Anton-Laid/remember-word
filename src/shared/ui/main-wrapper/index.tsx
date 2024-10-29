@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react";
-import classnames from "classnames";
+import cn from "classnames";
+import styles from "./styles.module.css";
 
 interface MainWrapperProps {
   children?: ReactNode;
@@ -7,7 +8,7 @@ interface MainWrapperProps {
 }
 
 const MainWrapper: FC<MainWrapperProps> = ({ children, extClassName }) => {
-  return <div className={classnames`${""} ${extClassName}`}>{children}</div>;
+  return <div className={cn(styles.wrapper, extClassName)}>{children}</div>;
 };
 
 export default MainWrapper;

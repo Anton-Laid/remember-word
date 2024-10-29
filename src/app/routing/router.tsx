@@ -1,29 +1,18 @@
 import { createBrowserRouter } from "react-router-dom";
 import { NotFound } from "../../pages/not-found";
 import { Routes } from "../../shared/config";
+import { Root } from "../../pages/root";
 import { Layout } from "../../pages/layout";
-import { RoutesGroup } from "./components";
+import { AddWord } from "../../pages/add-word/indext";
 
 export const router = createBrowserRouter([
   {
     path: Routes.ROOT,
     element: <Layout />,
     children: [
-      {
-        path: Routes.ROOT,
-        element: <RoutesGroup onlyUnauthorized />,
-        children: [
-          { path: Routes.ROOT, element: <h1>root</h1> },
-          {
-            path: Routes.REGISTER,
-            element: <h1>register</h1>,
-          },
-          {
-            path: Routes.HOME,
-            element: <h1>home</h1>,
-          },
-        ],
-      },
+      { path: Routes.ROOT, element: <Root /> },
+      { path: Routes.ADD_WORD, element: <AddWord /> },
+      { path: Routes.HUB_WORDS, element: <NotFound /> },
       { path: Routes.NOT_FOUND, element: <NotFound /> },
     ],
   },
